@@ -1,0 +1,2 @@
+export const BUY_ICECREAM = 'BUY_ICECREAM'
+export const REMOVE_ICECREAM = 'REMOVE_ICECREAM'

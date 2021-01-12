@@ -1,0 +1,47 @@
+.users{
+    float: left;
+    width: 100%;
+    text-align: center;
+    background-color: #f1f1f2;
+  
+}
+.userDetails{
+    width: 15%;
+    display: inline;
+    padding: 10px;
+    float: left;
+    padding: 0;
+
+}
+.userDetails h3{
+    font-style: italic;
+}
+.users p {
+    width: 100%;
+    display: inline;
+   
+
+}
+.users a{
+    display: block;
+    width: 100%;
+}
+.users a[href^="tel"]{   
+    text-decoration:none;
+}
+
+@media only screen and (max-width: 600px) {
+    .userDetails{
+        width: 100%;
+        border: 1px solid black;
+    }
+    .users{
+        width: 100%;
+        text-align: center;
+    }
+    .users p {
+        width: 100%;
+        display: block;
+    
+    }
+  }
