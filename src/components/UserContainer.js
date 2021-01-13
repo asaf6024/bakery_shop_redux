@@ -20,7 +20,7 @@ const UserContainer = ({ fetchUsers, userData }) =>{
     //אחרת אם בוצעה הטעינה בהצלחה - נחזיר את המידע
     : (
         <div className = 'users'>
-            <h2>Our Customers</h2>
+         
             {/* נחזיר את שמות המשתמשים  */}
             <div> 
                 {userData && userData.users && userData.users.map(user => 

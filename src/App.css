@@ -36,8 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
 .boxClass{
-background-color: gray;
+  background-color: lavenderblush;
+  border: 1px solid rgba(0,0,0,.125);
 display: 'inline-block';
 text-align: 'center';
 padding: '10px ';
@@ -45,6 +47,12 @@ width: 50%;
 float: left;
 }
 
+.card{
+  background-color: lavenderblush !important
+}
+.card-header{
+  background-color: lavenderblush !important
+}
 .addRemoveBtn{
   display: inline-block;
   width: 35%;
@@ -57,12 +65,20 @@ img{
 }
 .order{
   margin: 0% 10% 0 10%;
+  border: 1px solid rgba(0,0,0,.125);
+  height: max-content;
+  background-color: lavenderblush;
 }
 .totalOrder{
   text-align: center;
   width: 100%;
   float: left;
-  background-color: rgb(73, 73, 170);
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.125);
+}
+.users{
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.125);
 }
 
 @media only screen and (max-width: 600px) {
@@ -74,8 +90,32 @@ img{
     width: 100%;
     }
 }
-h1{
-  background-color: #f1f1f2;
+
+.header{  
+  background-color: blueviolet;
   padding: 15px;
   margin: 0;
+}
+.footer{
+  
+  padding-bottom: 0;
+}
+#developer, #technologies{
+  background-color: blueviolet;
+  height: 150px;
+  width: 50%;
+  float: left;
+  text-align: center;
+  margin: auto;
+  padding: auto;
+
+}
+
+#developer p, #technologies_Content{
+  height: 100%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
 }

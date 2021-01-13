@@ -8,27 +8,38 @@ import Order from './components/Order'
 import HooksCake from './components/HooksCake'
 
 import Item from './components/Item'
-import UserContainer from './components/UserContainer';
+
+import Delivery from './components/Delivery'
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Footer from './components/Footer'
+import Header from './components/Header'
+import User from './components/User'
 
 function App() {
+ 
     return (
       <Provider store={store}>
         <div className="App">
-          <h1>Shop</h1>
          
+          <Header/>
           {/* <HooksCake /> */}
+        
           <div className = 'order'>
+         
             <Cake />
             <IceCream/>
          
             {/* <NewCake /> */}
             <Order />
-          
+            <Delivery/>
+            <User />
+           
+            
           </div>
-          <UserContainer/>  
+         
           {/* <Item cake/>
           <Item/> */}
-
+        <Footer/>
         </div>
         </Provider>
       ); 

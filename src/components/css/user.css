@@ -2,8 +2,7 @@
     float: left;
     width: 100%;
     text-align: center;
-    background-color: #f1f1f2;
-  
+
 }
 .userDetails{
     width: 15%;
@@ -33,7 +32,7 @@
 @media only screen and (max-width: 600px) {
     .userDetails{
         width: 100%;
-        border: 1px solid black;
+        border: 1px solid rgba(0,0,0,.125);
     }
     .users{
         width: 100%;
