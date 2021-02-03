@@ -11,37 +11,33 @@ import Item from './components/Item'
 
 import Delivery from './components/Delivery'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.css";
 import Footer from './components/Footer'
 import Header from './components/Header'
 import User from './components/User'
 
+
 function App() {
- 
-    return (
-      <Provider store={store}>
-        <div className="App">
-         
-          <Header/>
-          {/* <HooksCake /> */}
-        
-          <div className = 'order'>
-         
-            <Cake />
-            <IceCream/>
-         
-            {/* <NewCake /> */}
-            <Order />
-            <Delivery/>
-            <User />
-           
-            
-          </div>
-         
-          {/* <Item cake/>
-          <Item/> */}
-        <Footer/>
+
+  return (
+    <Provider store={store}>
+      <div className="App">
+        <Header />
+        {/* <HooksCake /> */}
+        <div className='order'>
+          <Item/>
+          <Cake />
+          <IceCream />
+          <Order />
+          <Delivery />
+
+          {/* APi */}
+          <User />
         </div>
-        </Provider>
-      ); 
+        <Footer />
+      </div>
+    </Provider>
+  );
 }
 export default App;
+

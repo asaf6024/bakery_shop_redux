@@ -1,19 +1,15 @@
-//נייבא את המידלוור מתוך רידקס
+//Import middleWare 
 import { createStore, applyMiddleware } from 'redux'
-//..נייבא את התוסף ששמו קומפוס
+// Import plugin
 import { composeWithDevTools } from 'redux-devtools-extension';
-//נייבא את הלוגר
 import logger from 'redux-logger'
-
-//נייבא את הטנק
 import thunk from 'redux-thunk'
-
 import rootReducer from './rootReducer'
 
-
 //נשים את הקומפוס בתוך הסטור ובתוכו את המידלוור
+//createStore recives - Reducer + composeWithDevTools function that included applyMiddleware (logger, thunk)
 const store = createStore(rootReducer, composeWithDevTools(
-    applyMiddleware(logger, thunk), //נוסיף כאן את הטנק
+    applyMiddleware(logger, thunk), 
     // other store enhancers if any
   ));
 

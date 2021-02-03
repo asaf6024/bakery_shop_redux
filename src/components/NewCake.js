@@ -9,19 +9,13 @@ const NewCake = (props) =>{
 
     return(
         <div className= 'newCake'>
-
-            {/* //נקבל את המידע של הסטייט דרך פרופס  */}
-            {/* <h2>Cakes on stock: {props.numOfCakes}</h2>  */}
-
             <input type = 'text' value = {number} onChange = {e => setNumber(e.target.value)}></input>
-            {/* //נגדיר את האקשן קריאטור כפונקציה שמופעלת בעת לחיצה על הכפתור */}
-            <button onClick ={() =>props.buyCake(number)} >Buy {number} Cakes</button>
-            
+            <button onClick ={() =>props.buyCake(number)} >Buy {number} Cakes</button>            
         </div>
         
     )
 }
-// שלב ראשון - ייבוא והמרת הסטייט לפרופס
+// Step 1 - Convert State to Props
 const mapStateToProps = state => {
     console.log(state)
     return{
@@ -30,7 +24,7 @@ const mapStateToProps = state => {
     }
 }
 
-//שלב שני - ייבוא האקשן קריאטור
+//Step 2 - Import Action Creator
 const mapDispatchToProps = dispatch =>{
     return{
         buyCake: (number) => dispatch(actionCreators.cakes.buyCake(number)),
@@ -38,5 +32,5 @@ const mapDispatchToProps = dispatch =>{
     }
 }
 
-//שלב שלישי - חיבור הפונקציות לסטור
+//Step 3 - Connnect mapStateToProps + mapDispatchToProps to the Store
 export default connect(mapStateToProps, mapDispatchToProps)(NewCake)

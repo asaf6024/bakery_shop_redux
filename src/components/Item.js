@@ -13,23 +13,19 @@ const Item = (props) =>{
 }
 
 const mapStateToProps = (state, ownProps) => {
-
-//בודקים אם הגיע פרופס.
     const itemState = ownProps.cake
-     ? state.cake.numOfCakes //אם הגיע - נחזיר מספר עוגות
-     : state.iceCream.numOfIceCream //אם לא הגיע - נחזיר מספר גלידות
+     ? state.cake.numOfCakes 
+     : state.iceCream.numOfIceCream
 
     return{
         item: itemState
     }
 }
 
-
-//בודקים אם הפרופס שהגיע הוא עוגה
 const mapDispatchToProps = (dispatch, ownProps) =>{
     const dispatchFunction = ownProps.cake
-    ? dispatch(buyCake()) //אם הגיע - נחזיר פונקציית קניית עוגות
-    : dispatch(buyIceCream()) //אם לא הגיע - נחזיר פונקציית קניית גלידות
+    ? dispatch(buyCake()) 
+    : dispatch(buyIceCream()) 
 
     return{
        buyItem: dispatchFunction

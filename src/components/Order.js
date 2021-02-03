@@ -7,17 +7,17 @@ const Order = (props) =>{
     return(
         <div className = 'totalOrder'>
             <h2>Total Order:</h2>
-            <p>Number of Cakes: {props.cake.CakeForCustomer}, Price: {props.cake.totalPrice}</p>
-            <p>Ice Cream: {props.iceCream.iceCreamForCustomer}, Price: {props.iceCream.totalPrice}</p>
+            <p>Number of Cakes: {props.cake.CakeForCustomer}, Price: {props.cake.totalPrice}₪</p>
+            <p>Ice Cream: {props.iceCream.iceCreamForCustomer}, Price: {props.iceCream.totalPrice}₪</p>
             <h2>Total</h2>
             
-           {totalPriceIceCream + totalPriceCake}
+           {totalPriceIceCream + totalPriceCake}₪
            <br/><br/>
         </div>
     )
 }
 
-// שלב ראשון - ייבוא והמרת הסטייט לפרופס
+//Convert State to Props
 const mapStateToProps = state => {
     return{
         cake: state.cake,
@@ -25,5 +25,5 @@ const mapStateToProps = state => {
     }
 
 }
-//שלב שלישי - חיבור הפונקציות לסטור
+//Step 3 - Connnect mapStateToProps  to the Store
 export default connect(mapStateToProps)(Order)

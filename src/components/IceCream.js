@@ -6,27 +6,30 @@ const IceCream = (props) =>{
     return(
         <div className = 'boxClass'>
 
-                  {/* //נקבל את המידע של הסטייט דרך פרופס  */}
-                  <h2>Ice Cream on stock: {props.numOfIceCream}</h2> 
+            <h2>Ice Cream on stock: {props.numOfIceCream}</h2> 
 
-                   {/* //נגדיר את האקשן קריאטור כפונקציה שמופעלת בעת לחיצה על הכפתור */}
             <button className = 'addRemoveBtn' onClick ={props.buyIceCream} > + </button>
-            <button className = 'addRemoveBtn' onClick ={props.removeIceCream} > - </button>
+            <button className = 'addRemoveBtn' onClick ={props.removeIceCream} > - </button>       
 
+            <div className = 'productImg'>
             <img src = {props.iceCreamImg}></img>
+            <p className ='price'>Price for 1 unit: {props.price}₪</p>
+            </div>
+
             <NewIceCream />
         </div>
     )
 }
-// שלב ראשון - ייבוא והמרת הסטייט לפרופס
+// Step 1 - Convert State to Props
 const mapStateToProps = state => {
     return{
         numOfIceCream: state.iceCream.numOfIceCream,
-        iceCreamImg: state.iceCream.img
+        iceCreamImg: state.iceCream.img,
+        price: state.iceCream.price
     }
 }
 
-//שלב שני - ייבוא האקשן קריאטור
+//Step 2 - Import Action Creator
 const mapDispatchToProps = dispatch =>{
     return{
         buyIceCream: () => dispatch(actionCreators.iceCream.buyIceCream()),
@@ -34,5 +37,5 @@ const mapDispatchToProps = dispatch =>{
     }
 }
 
-//שלב שלישי - חיבור הפונקציות לסטור
+//Step 3 - Connnect mapStateToProps + mapDispatchToProps to the Store
 export default connect(mapStateToProps, mapDispatchToProps)(IceCream)
